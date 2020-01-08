@@ -4,6 +4,8 @@
 ### Authors
 David Nassif, Phillip Wirth, Michael Dowlin
 
+!['Image not available'](/images/oil_house.jpg)
+
 #### Description
 Houston's ties with oil run deeper than the Permian Basin.  This project pulls together various real-estate and employement data for the city, and greater area, of Houston by year, going back to the 1970's.  We also brought in the average closing? price of crude for the same time span.  How closely correlated are the oil prices with Houston's employment and housing data?  How much of a lag, if any, is there between a significant change in crude prices and the job/housing market?  Grab this data and find out!
 
