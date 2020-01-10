@@ -34,9 +34,9 @@ app = Flask(__name__)
 def welcome():
     """List all available api routes."""
     return (
-        f"Available Routes:<br/>"
-        f"/api/v1.0/houston_statistics"
-        f"/api/v1.0/houston_population<br/>"
+        f"Available Routes:"<br>
+        f"/api/v1.0/houston_statistics"<br>
+        f"/api/v1.0/houston_population" <br>
         f"/api/v1.0/WTI Oil Price"
     )
 
@@ -46,7 +46,7 @@ def stats():
 
     # Query population
     session = Session(engine)
-    results = session.query(housing, oil, engy_employees, employees, population).filter(housing.year == oil.year == engy_employees.year == employees.years == population.years).all()
+    results = session.query(housing, oil, engy_employees, employees, population).filter(housing.year == oil.year == engy_employees.year == employees.year == population.year).all()
     session.close()
 
     # Convert list of tuples into normal list
