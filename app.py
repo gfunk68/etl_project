@@ -85,7 +85,7 @@ def pop():
     return jsonify(data)
 
 @app.route("/api/v1.0/houston_non-farm_employees")
-def employees():
+def emp():
     """Return Houston non-farm employees data"""
 
     # Query data
@@ -103,7 +103,7 @@ def employees():
     return jsonify(data)
 
 @app.route("/api/v1.0/houston_energy_extraction_employees")
-def engyemployees():
+def engyemp():
     """Return Houston energy extraction employees data"""
 
     # Query data
@@ -121,7 +121,7 @@ def engyemployees():
     return jsonify(data)
 
 @app.route("/api/v1.0/WTI Oil Price")
-def oil():
+def price():
     """Return world oil price data"""
 
     # Query data
@@ -139,7 +139,7 @@ def oil():
     return jsonify(data)
 
 @app.route("/api/v1.0/houston_housing_index")
-def housing():
+def index():
     """Return Houston housing index data"""
 
     # Query data
