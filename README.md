@@ -12,12 +12,12 @@ Houston's ties with oil run deeper than the Permian Basin.  This project pulls t
 #### Datasets Used
 | Data                         | Method Retrieved           | URL                                                                 |
 |------------------------------|----------------------------|---------------------------------------------------------------------|
-|Oil prices by year	           |Web-scraping	              |                                                                     |
+|Oil prices by year	           |Web-scraping	              | https://www.macrotrends.net/1369/crude-oil-price-history-chart         |
 |Houston population by year	   |Web-scraping	              |http://worldpopulationreview.com/us-cities/houston-population/       |
 |Greater Houston population by year|	csv	| https://fred.stlouisfed.org/series/HTNPOP         |
 |Houston housing prices by year|	csv	|https://fred.stlouisfed.org/series/ATNHPIUS26420Q |
 |Houston non-farm employee population by year	|csv	|https://fred.stlouisfed.org/series/HOUS448NA |
-|Houston energy employee population by year|	csv	|https://fred.stlouisfed.org/series/SMU48264201021100001SA |
+|Houston energy extaction employee population by year|	csv	|https://fred.stlouisfed.org/series/SMU48264201021100001SA |
 
 #### Contents
 | File                         | Description                                                                                     |
