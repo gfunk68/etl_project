@@ -34,9 +34,9 @@ app = Flask(__name__)
 def welcome():
     """List all available api routes."""
     return (
-        f"Available Routes:"<br>
-        f"/api/v1.0/houston_statistics"<br>
-        f"/api/v1.0/houston_population" <br>
+        f"Available Routes:<br>"
+        f"/api/v1.0/houston_statistics<br>"
+        f"/api/v1.0/houston_population<br>"
         f"/api/v1.0/WTI Oil Price"
     )
 
