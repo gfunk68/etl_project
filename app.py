@@ -53,7 +53,7 @@ def stats():
     # Convert list of tuples into normal list
     stats = list(np.ravel(results))
 
-    return jsonify(stats)
+    return jsonify(results)
 
 @app.route("/api/v1.0/houston_population")
 def pop():
@@ -64,8 +64,14 @@ def pop():
     results = session.query(population).all()
     session.close()
 
-    # Convert list of tuples into normal list
-    pop = list(np.ravel(results))
+    #Create a dictionary from the row data and append to station data
+    pop = []
+    for data in results:
+        pop_dict = {}
+        pop_dict["year"] = data.year
+        pop_dict["population"] = data.population
+        pop.append(pop_dict)
+    return jsonify(pop)
 
     return jsonify(pop)
 
