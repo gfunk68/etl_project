@@ -54,7 +54,7 @@ def stats():
     data = []
     for result in results:
         data_dict = {}
-        data_dict["year"] = result.oil.year
+        data_dict["year"] = result.housing.year
         data_dict["population"] = result.population.population
         data_dict["employees"] = result.employees.employees
         data_dict["engy_employees"] = result.engy_employees.employees
