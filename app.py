@@ -54,12 +54,12 @@ def stats():
     data = []
     for result in results:
         data_dict = {}
-        data_dict["year"] = result.year
-        data_dict["population"] = result.population
-        data_dict["employees"] = result.employees
-        data_dict["engy_employees"] = result.employees
-        data_dict["oil_price (usd)"] = result.oilprice_usd
-        data_dict["housing_price_index"] = result.housing_price_index
+        data_dict["year"] = result.oil.year
+        data_dict["population"] = result.population.population
+        data_dict["employees"] = result.employees.employees
+        data_dict["engy_employees"] = result.engy_employees.employees
+        data_dict["oil_price (usd)"] = result.oil.oilprice_usd
+        data_dict["housing_price_index"] = result.housing.housing_price_index
         data.append(data_dict)
     return jsonify(data)
 
