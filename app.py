@@ -47,7 +47,7 @@ def stats():
 
     # Query data
     session = Session(engine)
-    results = session.query(housing, oil, engy_employees, employees, population).filter(housing.year == oil.year == engy_employees.year == employees.year == population.year).all()
+    results = session.query(housing, oil, engy_employees, employees, population).filter(housing.year == oil.year, housing.year == engy_employees.year, housing.year == employees.year, housing.year == population.year).all()
     session.close()
 
     #Create a dictionary from the row data and append
