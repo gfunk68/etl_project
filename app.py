@@ -18,7 +18,7 @@ Base.prepare(engine, reflect=True)
 oil = Base.classes.oilprice
 engy_employees = Base.classes.energy_extraction_employees
 employees = Base.classes.nonfarm_employees
-popuation = Base.classes.population
+population = Base.classes.population
 housing = Base.classes.housing_index
 
 #################################################
