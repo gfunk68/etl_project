@@ -45,35 +45,41 @@ def welcome():
 def stats():
     """Return Houston statistics data"""
 
-    # Query population
+    # Query data
     session = Session(engine)
     results = session.query(housing, oil, engy_employees, employees, population).filter(housing.year == oil.year == engy_employees.year == employees.year == population.year).all()
     session.close()
 
-    # Convert list of tuples into normal list
-    stats = list(np.ravel(results))
-
-    return jsonify(results)
+    #Create a dictionary from the row data and append
+    data = []
+    for result in results:
+        data_dict = {}
+        data_dict["year"] = result.year
+        data_dict["population"] = result.population
+        data_dict["employees"] = result.employees
+        data_dict["engy_employees"] = result.employees
+        data_dict["oil_price (usd)"] = result.oilprice_usd
+        data_dict["housing_price_index"] = result.housing_price_index
+        data.append(data_dict)
+    return jsonify(data)
 
 @app.route("/api/v1.0/houston_population")
 def pop():
     """Return Houston popuation data"""
 
-    # Query population
+    # Query data
     session = Session(engine)
     results = session.query(population).all()
     session.close()
 
-    #Create a dictionary from the row data and append to station data
-    pop = []
-    for data in results:
-        pop_dict = {}
-        pop_dict["year"] = data.year
-        pop_dict["population"] = data.population
-        pop.append(pop_dict)
-    return jsonify(pop)
-
-    return jsonify(pop)
+    #Create a dictionary from the row data and append
+    data = []
+    for result in results:
+        data_dict = {}
+        data_dict["year"] = result.year
+        data_dict["population"] = result.population
+        data.append(data_dict)
+    return jsonify(data)
 
 if __name__ == '__main__':
     app.run(debug=True)
