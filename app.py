@@ -38,6 +38,9 @@ def welcome():
         f"Available Routes:<br>"
         f"/api/v1.0/houston_statistics<br>"
         f"/api/v1.0/houston_population<br>"
+        f"/api/v1.0/houston_non-farm_employees<br>"
+        f"/api/v1.0/houston_energy_extraction_employees<br>"
+        f"/api/v1.0/houston_housing_index<br>"
         f"/api/v1.0/WTI Oil Price"
     )
 
@@ -58,7 +61,7 @@ def stats():
         data_dict["population"] = result.population.population
         data_dict["employees"] = result.nonfarm_employees.employees
         data_dict["engy_employees"] = result.energy_extraction_employees.employees
-        data_dict["oil_price (usd)"] = result.oilprice.oilprice_usd
+        data_dict["oil_price(usd)"] = result.oilprice.oilprice_usd
         data_dict["housing_price_index"] = result.housing_index.housing_price_index
         data.append(data_dict)
     return jsonify(data)
@@ -78,6 +81,78 @@ def pop():
         data_dict = {}
         data_dict["year"] = result.year
         data_dict["population"] = result.population
+        data.append(data_dict)
+    return jsonify(data)
+
+@app.route("/api/v1.0/houston_non-farm_employees")
+def pop():
+    """Return Houston non-farm employees data"""
+
+    # Query data
+    session = Session(engine)
+    results = session.query(employees).all()
+    session.close()
+
+    #Create a dictionary from the row data and append
+    data = []
+    for result in results:
+        data_dict = {}
+        data_dict["year"] = result.year
+        data_dict["employees"] = result.employees
+        data.append(data_dict)
+    return jsonify(data)
+
+@app.route("/api/v1.0/houston_energy_extraction_employees")
+def pop():
+    """Return Houston energy extraction employees data"""
+
+    # Query data
+    session = Session(engine)
+    results = session.query(engy_employees).all()
+    session.close()
+
+    #Create a dictionary from the row data and append
+    data = []
+    for result in results:
+        data_dict = {}
+        data_dict["year"] = result.year
+        data_dict["employees"] = result.employees
+        data.append(data_dict)
+    return jsonify(data)
+
+@app.route("/api/v1.0/WTI Oil Price")
+def pop():
+    """Return world oil price data"""
+
+    # Query data
+    session = Session(engine)
+    results = session.query(oil).all()
+    session.close()
+
+    #Create a dictionary from the row data and append
+    data = []
+    for result in results:
+        data_dict = {}
+        data_dict["year"] = result.year
+        data_dict["oil_price(usd)"] = result.oilprice_usd
+        data.append(data_dict)
+    return jsonify(data)
+
+@app.route("/api/v1.0/houston_housing_index")
+def pop():
+    """Return Houston housing index data"""
+
+    # Query data
+    session = Session(engine)
+    results = session.query(housing).all()
+    session.close()
+
+    #Create a dictionary from the row data and append
+    data = []
+    for result in results:
+        data_dict = {}
+        data_dict["year"] = result.year
+        data_dict["housing_price_index"] = result.housing_price_index
         data.append(data_dict)
     return jsonify(data)
 
