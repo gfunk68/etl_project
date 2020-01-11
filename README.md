@@ -40,6 +40,7 @@ Houston's ties with oil run deeper than the Permian Basin.  This project pulls t
 |fed_employee.ipynb               | Jupyter notebook to import and clean the fed employee data |
 |fed_energy_employee.ipynb            | Jupyter notebook to import and clean the fed energy employment data |
 |fed_housing.ipynb               | Jupyter notebook to import and clean the fed housing quarterly data (transform to annual)|
+|Final Paper.docx                | Final paper for the project.|
 |images\oil_house.jpg             | silly picture, 1st thing that came up on oil+house google...|
 |oilprices.ipynb                 | Jupyter notebook that scrapes the oil prices, and then stores in a dataframe |
 |population.ipynb             | Jupyter notebook to import and clean the fed population data|
