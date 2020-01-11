@@ -4,7 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <title>H-Town Trends</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+    <!-- Link to my js file, which retrieves the table html and renders it in a div-->
+    <script src="table.js" lang="JavaScript"></script>
 </head>
 
 <body>
@@ -13,9 +23,7 @@
             <div class="col-md-12 jumbotron text-center">
                 <h1><strong>H-Town MSA Statistics API</strong></h1>
             </div>
-            <div class="col-md-5">
-            </div>
-            <div class="col-md-2">
+            <div class="col-md-3">
                 <h2>Available Endpoints</h2>
                 <a class="btn btn-primary btn-lg" type="submit" href="/api/v1.0/houston_statistics">Houston MSA Statistics</a>
                 <p>/api/v1.0/houston_statistics</p>
@@ -30,16 +38,12 @@
                 <a class="btn btn-primary btn-lg" type="submit" href="/api/v1.0/WTI Oil Price">WTI Oil Price</a>
                 <p>/api/v1.0/WTI Oil Price</p>
             </div>
-            <div class="col-md-5">
+            <div class="col-md-9">
+                <div id="tableDiv">
+                </div>
             </div>
         </div>
     </div>
 </body>
 
 </html>
-
-f"/api/v1.0/houston_population<br>"
-f"/api/v1.0/houston_non-farm_employees<br>"
-f"/api/v1.0/houston_energy_extraction_employees<br>"
-f"/api/v1.0/houston_housing_index<br>"
-f"/api/v1.0/WTI Oil Price"
