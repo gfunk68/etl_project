@@ -35,6 +35,10 @@ app = Flask(__name__)
 def index():
     return render_template("index.html")
 
+@app.route("/table")
+def tablejs():
+    return redirect("/")
+
 @app.route("/api/v1.0/houston_statistics")
 def stats():
     """Return Houston statistics data"""
