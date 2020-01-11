@@ -35,10 +35,6 @@ app = Flask(__name__)
 def index():
     return render_template("index.html")
 
-@app.route("/table")
-def tablejs():
-    return redirect("/")
-
 @app.route("/api/v1.0/houston_statistics")
 def stats():
     """Return Houston statistics data"""
@@ -115,7 +111,7 @@ def engyemp():
         data.append(data_dict)
     return jsonify(data)
 
-@app.route("/api/v1.0/WTI Oil Price")
+@app.route("/api/v1.0/wti_oil_price")
 def price():
     """Return world oil price data"""
 
