@@ -32,17 +32,8 @@ app = Flask(__name__)
 #################################################
 
 @app.route("/")
-def welcome():
-    """List all available api routes."""
-    return (
-        f"Available Routes:<br>"
-        f"/api/v1.0/houston_statistics<br>"
-        f"/api/v1.0/houston_population<br>"
-        f"/api/v1.0/houston_non-farm_employees<br>"
-        f"/api/v1.0/houston_energy_extraction_employees<br>"
-        f"/api/v1.0/houston_housing_index<br>"
-        f"/api/v1.0/WTI Oil Price"
-    )
+def index():
+    return render_template("index.html")
 
 @app.route("/api/v1.0/houston_statistics")
 def stats():
