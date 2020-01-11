@@ -15,7 +15,12 @@ Houston's ties with oil run deeper than the Permian Basin.  This project pulls t
 |1      |Open Postgres                       |The PosgreSQL service needs to be running                                           |
 |2      |Create a PosgreSQL DB called "houston_statistics_db"|This will be the db used to store the data that is scraped/downloaded.|
 |3      |Run the following jupyter notebooks to import the CSVs, and scrape the oil prices|(order not important)            |
-| a     |fed_employee.ipynb                  |This will import the houston_employees.csv, which is all non-farm employees in the Houston metropoliton statistical area (MSA).  The data is already by year, so the cleaning done here is column and index renaming.  Data is stored in the nonfarm_employees table.|
+|3-a    |fed_employee.ipynb                  |This will import the houston_employees.csv, which is all non-farm employees in the Houston metropoliton statistical area (MSA).  The data is already by year, so the cleaning done here is column and index renaming.  Data is stored in the nonfarm_employees table.|
+|3-b    |fed_energy_employee.ipynb|This will import the houston_energy_employees.csv, which is employees involved in the extraction of oil and gas in the Houston MSA.  This data is also by year, and the cleaning is related to column and index renaming.  Data is stored in the energy_extraction_employees table.|
+|3-c    |fed_housing.ipynb            |This will import the houston_housing.csv file, which has a quarterly housing cost index for the Houston MSA.  The data is averaged by year, with some column/index renaming.  The data is stored in the housing_index table.|
+|3-d    |oilprices.ipynb              |This notebook uses the pandas read_html function to scrape oil price history from macrotrends.net.  The prices are by year, and we are only grabbing the average close price.  The data is stored in the oilprice table.|
+|3-e    |population.ipynb             |This notebook imports the houston_population.csv file, which has population data (by year) for the Houston MSA.  There is some munging of the data, like converting the population which was reported in the thousands.  The data is stored in the population table.|
+|4      |Run the app.py application |This will launch the flask application.  To access, open a browser and go to the local host address|
 
 #### Datasets Used
 | Data                         | Method Retrieved           | URL                                                                 |
