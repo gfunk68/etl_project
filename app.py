@@ -130,7 +130,7 @@ def price():
     return jsonify(data)
 
 @app.route("/api/v1.0/houston_housing_index")
-def index():
+def houseindex():
     """Return Houston housing index data"""
 
     # Query data
